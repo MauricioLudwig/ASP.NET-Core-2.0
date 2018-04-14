@@ -1,0 +1,18 @@
+﻿@model IEnumerable<AspNetCoreVideo.Models.Video>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Video</title>
+</head>
+<body>
+    <table>
+        @foreach (var video in Model)
+        {
+            <tr>
+                <td>@video.Id</td>
+                <td>@video.Title</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
