@@ -10,7 +10,7 @@ namespace AspNetCoreVideo.Services
     public class MockVideoData : IVideoData
     {
 
-        private IEnumerable<Video> _videos;
+        private List<Video> _videos;
 
         public MockVideoData()
         {
@@ -20,6 +20,12 @@ namespace AspNetCoreVideo.Services
                 new Video { Id = 2, Genre = Genres.Action, Title = "The Two Towers"},
                 new Video { Id = 3, Genre = Genres.Romance, Title = "The Return of the King"}
             };
+        }
+
+        public void Add(Video newVideo)
+        {
+            newVideo.Id = _videos.Max(o => o.Id) + 1;
+            _videos.Add(newVideo);
         }
 
         public Video Get(int id)
