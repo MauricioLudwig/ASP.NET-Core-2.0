@@ -1,13 +1,14 @@
-﻿@model AspNetCoreVideo.ViewModels.VideoViewModel
+﻿@model VideoViewModel
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <div>Id: @Model.Id</div>
-    <div>Title: @Model.Title</div>
-    <div>Genre: @Model.Genre</div>
-    @Html.ActionLink("Home", "Index")
-</body>
-</html>
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>Id: @Model.Id</div>
+<div>Title: @Model.Title</div>
+<div>Genre: @Model.Genre</div>
+@Html.ActionLink("Home", "Index")
+
+@section footer {
+    <div>This is the Details footer</div>
+}

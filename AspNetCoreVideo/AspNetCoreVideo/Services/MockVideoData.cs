@@ -22,6 +22,11 @@ namespace AspNetCoreVideo.Services
             };
         }
 
+        public int Commit()
+        {
+            return 0;
+        }
+
         public void Add(Video newVideo)
         {
             newVideo.Id = _videos.Max(o => o.Id) + 1;

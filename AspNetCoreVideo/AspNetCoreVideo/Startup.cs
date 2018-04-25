@@ -22,8 +22,8 @@ namespace AspNetCoreVideo
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
+                .SetBasePath(Directory.GetCurrentDirectory());
+                //.AddJsonFile("appsettings.json");
                 //.AddJsonFile("appsettings.json", optional: true);
 
             if (env.IsDevelopment())
