@@ -1,6 +1,30 @@
-﻿@section breadcrumb{
+﻿@model NewBookVM
+@using Lecture2.Models
+
+@section breadcrumb{
     <li class="breadcrumb-item" aria-current="page">Home</li>
     <li class="breadcrumb-item active" aria-current="page">Create</li>
 }
 
 <p class="lead text-center">Create</p>
+
+<form asp-action="Create" method="post">
+
+    <div asp-validation-summary="All"></div>
+
+    <label asp-for="Title"></label>
+    <input asp-for="Title" />
+    <span asp-validation-for="Title"></span>
+
+    <label asp-for="Author"></label>
+    <input asp-for="Author" />
+
+    <label asp-for="Pages"></label>
+    <input asp-for="Pages" />
+
+    <label asp-for="Genre"></label>
+    <select asp-for="Genre" asp-items="Html.GetEnumSelectList<Genre>()"></select>
+
+    <input type="submit" value="Submit new Book" />
+
+</form>
