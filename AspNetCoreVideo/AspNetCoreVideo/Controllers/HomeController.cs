@@ -5,9 +5,11 @@ using System.Linq;
 using AspNetCoreVideo.Models;
 using AspNetCoreVideo.ViewModels;
 using AspNetCoreVideo.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AspNetCoreVideo.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
 
@@ -18,6 +20,7 @@ namespace AspNetCoreVideo.Controllers
             _videos = videos;
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public ViewResult Index()
         {

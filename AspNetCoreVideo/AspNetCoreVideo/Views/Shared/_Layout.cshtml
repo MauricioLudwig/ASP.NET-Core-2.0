@@ -6,6 +6,11 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+
+    <div>
+        @await  Html.PartialAsync("_LoginLinks")
+    </div>
+
     <div>
         @RenderBody()
     </div>
