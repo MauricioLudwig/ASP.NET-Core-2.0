@@ -287,3 +287,6 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 /AspNetCoreVideo/AspNetCoreVideo/appsettings.json
+/AspNetCoreVideo/VideoOnDemand.UI/appsettings.json
+/AspNetCoreVideo/VideoOnDemand.UI/appsettings.Development.json
+/AspNetCoreVideo/VideoOnDemand.Data/appsettings.json
