@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Lecture3.Controllers
 {
 
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public class MemberController : Controller
     {
         [HttpGet]

@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Lecture3.Data;
+using Lecture3.Data.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,14 +19,22 @@ namespace Lecture3
 
         private IConfiguration configuration;
 
-        public Startup(IConfiguration configuration)
+        public Startup()
         {
-            this.configuration = configuration;
+            var builder = new ConfigurationBuilder();
+            builder.AddUserSecrets<Startup>();
+            configuration = builder.Build();
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<Lecture3DbContext>(options => options.UseSqlServer(connection));
+
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<Lecture3DbContext>()
+                .AddDefaultTokenProviders();
+
             services.AddMvc();
         }
 
@@ -36,6 +48,7 @@ namespace Lecture3
                 app.UseBrowserLink();
             }
 
+            app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
         }
     }

@@ -1,1 +1,31 @@
-﻿
+﻿@model Lecture3.ViewModels.RegisterVM
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<form asp-controller="Account" asp-action="Register" method="post">
+
+    <div asp-validation-summary="ModelOnly"></div>
+
+    <div>
+        <label asp-for="@Model.UserName"></label>
+        <input asp-for="@Model.UserName" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+
+    <div>
+        <label asp-for="@Model.Password"></label>
+        <input asp-for="@Model.Password" />
+        <span asp-validation-for="UserName"></span>
+    </div>
+
+    <input type="submit" value="Register" />
+
+</form>
+
+<script src="http://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.js"></script>
