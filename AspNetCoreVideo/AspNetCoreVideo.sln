@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lecture3", "Lecture3\Lectur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefaultBoilerplate", "DefaultBoilerplate\DefaultBoilerplate.csproj", "{D2B8FDDC-1AF6-48B4-A0D3-14D41FDE78AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOnDemand.UI", "VideoOnDemand.UI\VideoOnDemand.UI.csproj", "{E617309D-92EC-4FA5-9D48-880EA75A0946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoOnDemand.UI", "VideoOnDemand.UI\VideoOnDemand.UI.csproj", "{E617309D-92EC-4FA5-9D48-880EA75A0946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoOnDemand.Data", "VideoOnDemand.Data\VideoOnDemand.Data.csproj", "{7DDA621F-A5FC-460A-834B-CCFF0183A2B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoOnDemand.Data", "VideoOnDemand.Data\VideoOnDemand.Data.csproj", "{7DDA621F-A5FC-460A-834B-CCFF0183A2B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture4", "Lecture4\Lecture4.csproj", "{2CC338C5-B3E5-4CA4-A056-595980BC1C51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7DDA621F-A5FC-460A-834B-CCFF0183A2B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DDA621F-A5FC-460A-834B-CCFF0183A2B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DDA621F-A5FC-460A-834B-CCFF0183A2B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CC338C5-B3E5-4CA4-A056-595980BC1C51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CC338C5-B3E5-4CA4-A056-595980BC1C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CC338C5-B3E5-4CA4-A056-595980BC1C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CC338C5-B3E5-4CA4-A056-595980BC1C51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
