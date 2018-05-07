@@ -10,8 +10,8 @@ namespace Lecture4.Data
     public class Lecture4DbContext : DbContext
     {
 
-        public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         public Lecture4DbContext(DbContextOptions<Lecture4DbContext> options) : base(options)
         {

@@ -9,9 +9,9 @@ namespace Lecture4.Data.Entities
     {
         // Naming Convention
         // Case insensitive
-        // Entity class name +(or) Id are valid primary key names
 
         //public int BookId { get; set; }
+        //public int BOOKID { get; set; }
         //public int ID { get; set; }
         //public int id { get; set; }
 
