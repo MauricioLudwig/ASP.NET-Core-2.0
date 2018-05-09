@@ -11,9 +11,10 @@ using System;
 namespace Lecture4.Migrations
 {
     [DbContext(typeof(Lecture4DbContext))]
-    partial class Lecture4DbContextModelSnapshot : ModelSnapshot
+    [Migration("20180509125046_many-to-many")]
+    partial class manytomany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

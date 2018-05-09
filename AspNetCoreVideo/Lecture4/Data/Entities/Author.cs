@@ -9,5 +9,6 @@ namespace Lecture4.Data.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public ICollection<AuthorBook> AuthorBooks { get; set; }        
     }
 }

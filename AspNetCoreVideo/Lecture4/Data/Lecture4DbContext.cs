@@ -12,6 +12,7 @@ namespace Lecture4.Data
 
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books { get; set; }
+        public DbSet<AuthorBook> AuthorBooks { get; set; }
 
         public Lecture4DbContext(DbContextOptions<Lecture4DbContext> options) : base(options)
         {
@@ -20,6 +21,18 @@ namespace Lecture4.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<AuthorBook>().HasKey(o => new { o.AuthorId, o.BookId });
+
+            builder.Entity<AuthorBook>()
+                .HasOne(o => o.Author)
+                .WithMany(o => o.AuthorBooks)
+                .HasForeignKey(o => o.AuthorId);
+
+            builder.Entity<AuthorBook>()
+    .HasOne(o => o.Book)
+    .WithMany(o => o.AuthorBooks)
+    .HasForeignKey(o => o.BookId);
         }
 
     }
